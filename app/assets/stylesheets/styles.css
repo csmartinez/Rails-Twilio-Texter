@@ -5,3 +5,8 @@
 .column {
 
 }
+
+#add {
+  float: right;
+  margin-right: 70pt;
+}
