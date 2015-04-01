@@ -6,9 +6,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+  <div class="container">
+    <body>
+        <h1><small><%= link_to "Create New Message", new_message_path %></small></h1>
+      <div class="nav">
+        <button class="btn btn-primary btn-xs"><%= link_to 'Home', "/messages" %></button>
+      </div>
 <%= flash[:notice] %>
 <%= yield %>
-
+  </div>
 </body>
 </html>

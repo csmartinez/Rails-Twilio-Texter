@@ -1,9 +1,32 @@
-<h1>Messages</h1>
+<h1>Sent Messages</h1>
 
-<ul>
+
   <% @messages.each do |message| %>
-  <li><%= link_to message.body, message_path(message) %></li>
+  <h4>"<%= link_to message.body, message_path(message) %>"</h4>
   <% end %>
-</ul>
 
-<%= link_to "New Message", new_message_path %>
+
+<!-- select
+optionvalue = "person.name"
+optionvalue = "person.name"
+optionvalue = "person.name"
+/select
+
+value= selected person.email -->
+
+<div class="column">
+  <h1>Saved Contacts</h1>
+  <% if @contacts %>
+    <% @contacts.each do |contact| %>
+      <h4><%= link_to contact.name, contact_path(contact) %>'s number: <%= contact.number %></h4>
+      <% end %>
+    <% end %>
+
+  <%= form_for @contact do |f| %>
+    <%= f.label :Name %>
+    <%= f.text_field :name %>
+    <%= f.label :Number %>
+    <%= f.text_field :number %><br>
+    <button class="btn btn-xs btn-primary">Add</button>
+  <% end %>
+</div>

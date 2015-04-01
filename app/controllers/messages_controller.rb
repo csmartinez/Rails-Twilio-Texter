@@ -5,6 +5,8 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.all
+    @contacts = Contact.all
+    @contact = Contact.new
   end
 
   def create

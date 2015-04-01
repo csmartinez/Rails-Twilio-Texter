@@ -11,8 +11,8 @@
   <%= f.label :to %>
   <%= f.text_field :to %>
   <%= f.label :from %>
-  <%= f.text_field :from %>
-  <%= f.label :body %>
-  <%= f.text_field :body %>
-  <%= f.submit %>
+  <%= f.text_field :from %><br>
+  <%= f.label :body %><br>
+  <%= f.text_area(:body, size: "30x2") %><br>
+  <button class="btn btn-xs btn-primary">Send</button>
 <% end %>
